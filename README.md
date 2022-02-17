@@ -7,5 +7,5 @@
 )
 3 установите пакеты composer
 
-Пример работы данной MVC https://elparfumers.ru/
+
  
