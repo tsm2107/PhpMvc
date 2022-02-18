@@ -91,7 +91,7 @@ class Provider extends AbstractProvider
     }
 }
 ```
- Делее в папке [engine/Service/Config/](/engine/Service/Config)  в файле [Service.php](/engine/Service/Config/Service.php) есть массив в него добавляем нового провайдера **Engine\Service\Cache\Provider::class**
+ Делее в папке [engine/Service/Config/](/engine/Config/)  в файле [Service.php](/engine/Config/Service.php) есть массив в него добавляем нового провайдера **Engine\Service\Cache\Provider::class**
  Потом в действиях контроллеров через свойство **$this->di->get** можно получить доступ к **MyСacheRedis**
  Пример:
  ```php
