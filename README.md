@@ -36,10 +36,10 @@ $this->router->add('HomePageVaiblePOST', '/(id:int)', 'CrmController:index3','PO
 ## Контроллеры
 
 Контроллеры реагируют на действия пользователя (нажатие на ссылку, отправка формы и т. д.). 
-Контроллеры хранятся в папке **cms/Controller** 
+Контроллеры хранятся в папке [cms/Controller](/cms/Controller) 
 Образец [HomePage контроллера](/cms/Controller/CrmController.php) включен.
 Вы можите создать свой контроллер:
-Добавив файл **MyNew.php** в папку **cms/Controller** 
+Добавив файл **MyNew.php**
 Классы контроллеров должны находиться в пространстве имен namespace Cms\Controller; использовать расширение use Engine\Controller;
 Пример:
 ```php
@@ -87,7 +87,7 @@ class Provider extends AbstractProvider
     {
         $redis = new Redis();
         $redis->connect('127.0.0.1', 6379);
-        $this->di->set($this->serviceName, $redis);//Расширение добавляются методом set.В глобальную переменную
+        $this->di->set($this->serviceName, $redis);//Расширение добавляются методом set.
     }
 }
 ```
