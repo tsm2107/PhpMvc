@@ -19,8 +19,8 @@ location / {
 
 ## Маршрутизация
 
-[Маршрутизатор]Включен пример домашнего маршрута, который ведет к действию index в [CrmController](cms\Controller\CrmController.php).
-Все маршруты находятся в папке **engine** фаил [Cms.php](\engine\Cms.php)
+[Маршрутизатор]Включен пример домашнего маршрута, который ведет к действию index в [CrmController](/cms/Controller/CrmController.php).
+Все маршруты находятся в папке **engine** фаил [Cms.php](/engine/Cms.php)
 Маршруты добавляются методом add. Вы можете добавить фиксированные маршруты URL и указать контроллер и действие, например:
 ```php
 $this->router->add('HomePage', '/', 'CrmController:index');
@@ -37,7 +37,7 @@ $this->router->add('HomePageVaiblePOST', '/(id:int)', 'CrmController:index3','PO
 
 Контроллеры реагируют на действия пользователя (нажатие на ссылку, отправка формы и т. д.). 
 Контроллеры хранятся в папке **cms/Controller** 
-Образец [HomePage контроллера](\cms\Controller\CrmController.php) включен.
+Образец [HomePage контроллера](/cms/Controller/CrmController.php) включен.
 Вы можите создать свой контроллер:
 Добавив файл **MyNew.php** в папку **cms/Controller** 
 Классы контроллеров должны находиться в пространстве имен namespace Cms\Controller; использовать расширение use Engine\Controller;
@@ -71,7 +71,7 @@ $this->di->get('templates')->render('index.twig', ['q' => 1]);
 MVC поддерживает расширения
 Если вам нужно добавить кэширование данных в редис
 вы должны установить его в composer require predis/predis
-Затем в папке [engine/Service](\engine\Service) создать папку **Cache** в папке **engine/Service/Cache** Создать класс Provider (**Provider.php**). 
+Затем в папке [engine/Service](/engine/Service) создать папку **Cache** в папке **engine/Service/Cache** Создать класс Provider (**Provider.php**). 
 Классы Provider должны находиться в пространстве имен **namespace Engine\Service\Cache;**
 использовать расширение **use Engine\Service\AbstractProvider;** 
 И использовать расширяемый класс для доступа из пакета composer **use Redis;**
@@ -91,7 +91,7 @@ class Provider extends AbstractProvider
     }
 }
 ```
- Делее в папке [engine/Service/Config/](\engine\Service\Config)  в файле [Service.php](\engine\Service\Config\Service.php) есть массив в него добавляем нового провайдера **Engine\Service\Cache\Provider::class**
+ Делее в папке [engine/Service/Config/](/engine/Service/Config)  в файле [Service.php](/engine/Service/Config/Service.php) есть массив в него добавляем нового провайдера **Engine\Service\Cache\Provider::class**
  Потом в действиях контроллеров через свойство **$this->di->get** можно получить доступ к **MyСacheRedis**
  Пример:
  ```php
