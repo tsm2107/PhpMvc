@@ -6,7 +6,7 @@ class Common
     /**
      * @return bool
      */
-    public state function isPost()
+     function isPost() // or php8.0 /*public state*/
     {
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
@@ -18,7 +18,7 @@ class Common
     /**
      * @return mixed
      */
-     public state function getMethod()
+    function getMethod() // or php8.0 /*public state*/
     {
         return $_SERVER['REQUEST_METHOD'];
     }
@@ -26,7 +26,7 @@ class Common
     /**
      * @return bool|string
      */
-     public state function getPatchUrl()
+    function getPatchUrl()// or php8.0 /*public state*/
     {
         $pathUrl = $_SERVER['REQUEST_URI'];
 
