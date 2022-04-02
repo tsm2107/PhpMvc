@@ -17,7 +17,6 @@ class Conection extends PDO
             $this->conect['user'], $this->conect['pass']);
 
     }
-
     /**
      * @param $sql
      * @return mixed
@@ -30,7 +29,6 @@ class Conection extends PDO
         }
 
         $stmt = $this->link->prepare($sql);;
-        //echo $sql;
         // Bind parameters
         if (is_array($bindings)) {
             for ($i = 0, $ien = count($bindings); $i < $ien; $i++) {

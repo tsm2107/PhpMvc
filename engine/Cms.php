@@ -24,8 +24,11 @@ class Cms
     }
     public function run()
     {
-        $this->router->add('HomePage', '/', 'CrmController:index1');
-        $this->router->add('NumPage', '/(id:int)', 'CrmController:index2');
+        $this->router->add('HomePage', '/', 'PublicController:index1');
+        $this->router->add('NumPage', '/(id:int)', 'PublicController:index2');
+        $this->router->add('CheckAuth', '/check', 'PrivateController:check');
+        $this->router->add('Auth', '/auth', 'PrivateController:auth');
+
         $routerDispath = $this->router->dispatch(Common::getMethod(), Common::getPatchUrl());
         if ($routerDispath == null) {
             $routerDispath = new DispathedRoute('CrmController:page404');

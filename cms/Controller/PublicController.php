@@ -11,10 +11,11 @@ namespace Cms\Controller;
 use Engine\Controller;
 use Twig\TwigFunction;
 
-class CrmController extends Controller
+class PublicController extends Controller
 {
     public $versions;
     public $function;
+    private $autUser;
 
     public function __construct($di)
     {
@@ -33,6 +34,7 @@ class CrmController extends Controller
         });
         $this->di->get('templates')->addFunction($this->function);
         $this->di->get('templates')->addFunction($this->versions);
+
     }
     public function index1()
     {
