@@ -31,7 +31,7 @@ $this->router->add('HomePageVaible', '/(id:int)', 'PublicController:index2');
 ```
 Или вы можете добавить **Тип маршрута**  маршрута, по умолчанию используется GET Можно установить(POST) например:
 ```php
-$this->router->add('HomePageVaiblePOST', '/(id:int)', 'PublicController:index3','POST');
+$this->router->add('[Название контроллера]', '/([переменная]:[тип(int,any,str)])', '[Класс контроллера]:[функция]','POST');
 ```
 ## Контроллеры
 
