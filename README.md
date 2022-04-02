@@ -23,15 +23,15 @@ location / {
 Все маршруты находятся в папке **engine** фаил [Cms.php](/engine/Cms.php)
 Маршруты добавляются методом add. Вы можете добавить фиксированные маршруты URL и указать контроллер и действие, например:
 ```php
-$this->router->add('HomePage', '/', 'CrmController:index');
+$this->router->add('HomePage', '/', 'PublicController:index');
 ```
 Или вы можете добавить **переменные** маршрута, например:
 ```php
-$this->router->add('HomePageVaible', '/(id:int)', 'CrmController:index2');
+$this->router->add('HomePageVaible', '/(id:int)', 'PublicController:index2');
 ```
 Или вы можете добавить **Тип маршрута**  маршрута, по умолчанию используется GET Можно установить(POST) например:
 ```php
-$this->router->add('HomePageVaiblePOST', '/(id:int)', 'CrmController:index3','POST');
+$this->router->add('HomePageVaiblePOST', '/(id:int)', 'PublicController:index3','POST');
 ```
 ## Контроллеры
 
