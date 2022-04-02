@@ -3,7 +3,7 @@ namespace Cms\Controller;
 use Engine\Controller;
 use Twig\TwigFunction;
 
-class PublicController extends Controller
+class PrivateController extends Controller
 {
     public $versions;
     public $function;
