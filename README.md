@@ -7,7 +7,6 @@
 2. ```composer update```
 3. Настройте web сервер
 Пример конфигурации Nginx:
-[/config/config.php]
 ```php
 location / {
         try_files $uri $uri/ /index.php?$query_string;
