@@ -10,7 +10,7 @@ location / {
         try_files $uri $uri/ /index.php?$query_string;
     }
 ```
-3. Установите подключение к базе данных в файле [config.php](/config/config.php)
+4. Установите подключение к базе данных в файле [config.php](/config/config.php)
 ## Основы маршрутизации
 Все маршруты определены в ваших файлах маршрутов, которые расположены в файле [Cms.php](/engine/Cms.php). Эти файлы автоматически загружаются вашим приложением [PublicController](/cms/Controller/PublicController.php).
 
