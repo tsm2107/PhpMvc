@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Alan
- * Date: 07.08.2020
- * Time: 16:44
- */
 
 namespace Engine\Core\Auth;
 use Firebase\JWT\JWT;
